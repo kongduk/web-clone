@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quote</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        body{
+          font-family: "Black Han Sans", sans-serif;
+            text-align: center;
+            color: #8FC76D;
+        }
+        p{
+          padding-top: 170px;
+          font-size: 60px;
+        }
+        #modalOpenButton, #modalCloseButton {
+            cursor: pointer;
+            text-align: center;
+        }
+        #modalOpenButton2, #modalCloseButton2 {
+          cursor: pointer;
+          text-align: center;
+        }
+        #imgg{
+          margin-top: 80px;
+        }
+
+        #modalContent {
+          background-color: white;
+          width: 680px;
+          height: 290px;
+          padding: 10px;
+        }
+        #modalContent2 {
+          background-color: white;
+          width: 600px;
+          height: 220px;
+          padding: 10px;
+        }
+
+          #modalContainer.hidden {
+            display: none;
+          }
+          #modalContainer2.hidden2 {
+            display: none;
+          }
+
+
+          #modalContainer {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #8FC76D;
+            background: rgba(0, 0, 0, 0.5);
+          }
+          #modalContainer2 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #8FC76D;
+            background: rgba(0, 0, 0, 0.5);
+          }
+        a:link, a:visited {
+            text-decoration: none;
+            color: #8FC76D;
+        }
+        ul {
+            list-style: none;
+            width:620px;
+            margin: auto auto;
+            padding:0;
+        }
+        li {
+            display:inline-block;
+            width:170px;
+            border:5px solid #8FC76D;
+            padding:5px 5px;
+            font-size:35px;
+            text-align:center;
+            border-radius: 80px;
+        }
+        .brave{
+            text-align: center;
+            margin-top: 1%;
+        }
+        .mainpage{
+          padding-top: 100px;
+        }
+        .mainpage > li{
+          display:inline-block;
+            width:130px;
+            border:5px solid #8FC76D;
+            padding:5px 5px;
+            font-size:18px;
+            border-radius: 80px;
+            position: fixed;
+            top: 620px;
+            left: 1200px;
+        }
+    </style>
+</head>
+<body>
+  <p><b>MOTTO OF MY LIFE</b></p>
+  <div id="imgg">
+    <div class="brave">
+      <ul>
+          <li id="modalOpenButton">open</li>
+          <li id="modalOpenButton2">열기</li>
+      </ul>
+  </div>
+  </div>
+  <div class="brave">
+    <ul>
+        <div class="mainpage"><li><a href="code_mainpage2.html">main page</a></li></div>
+    </ul>
+</div>
+    <div id="modalContainer" class="hidden">
+        <div id="modalContent">
+            <h1>My life is responsibility.</h1>
+            <h1>To fall is not your fault.</h1>
+            <h1>But not to get up on your feet will be.</h1>
+            <div class="brave">
+              <ul>
+                  <li id="modalCloseButton">close</li>
+              </ul>
+          </div>
+        </div>
+    </div>
+    <div id="modalContainer2" class="hidden2">
+      <div id="modalContent2">
+          <h1>실패하는 것은 당신의 잘못이 아니다.</h1>
+          <h1>하지만 다시 일어나지 않는 것은 잘못이다.</h1>
+          <div class="brave">
+            <ul>
+                <li id="modalCloseButton2">닫기</li>
+            </ul>
+        </div>
+      </div>
+  </div>
+    <script>
+        const modalOpenButton = document.getElementById('modalOpenButton');
+        const modalCloseButton = document.getElementById('modalCloseButton');
+        const modal = document.getElementById('modalContainer');
+
+        modalOpenButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        modalCloseButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+
+        const modalOpenButton2 = document.getElementById('modalOpenButton2');
+        const modalCloseButton2 = document.getElementById('modalCloseButton2');
+        const modal2 = document.getElementById('modalContainer2');
+
+        modalOpenButton2.addEventListener('click', () => {
+            modal2.classList.remove('hidden2');
+        });
+        modalCloseButton2.addEventListener('click', () => {
+            modal2.classList.add('hidden2');
+        });
+    </script>
+
+</body>
+</html>

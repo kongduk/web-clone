@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time machine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        body{
+            font-family: "Black Han Sans", sans-serif;
+            text-align: center;
+            color: #8FC76D;
+        }
+        .result{
+            font-size: 60px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .box{
+            width: 220px;
+            height: 340px;
+            background-color: #8FC76D;
+            display: inline-block;
+            padding: 6px 20px;
+            margin: 10px 15px;
+            text-align: center;
+        }
+        .box > img{
+            margin-top: 20px;
+        }
+        a:link, a:visited {
+            text-decoration: none;
+            color: #8FC76D;
+        }
+        ul {
+            text-align: center;
+            list-style: none;
+            padding-top: 20px;
+            padding-right: 80px;
+        }
+        li {
+            display:inline;
+            width:100px;
+            border:5px solid #8FC76D;
+            padding:7px 10px;
+            font-size:24px;
+            border-radius: 80px;
+            text-align: center;
+        }
+        .de, .in{
+            display: inline;
+        }
+        .de > li{
+            width: 84px;
+            font-size: 90px;
+            height: 100px;
+            padding-right: 16px;
+            float: left;
+            border:7px solid #8FC76D;
+            margin-top: 120px;
+        }
+        .in > li{
+            width: 86px;
+            font-size: 72px;
+            height: 90px;
+            padding-left: 14px;
+            padding-top: 10px;
+            float: right;
+            border:7px solid #8FC76D;
+            margin-top: 120px;
+        }
+        .braver{
+            width: 1000px;
+            height: 400px;
+            margin: auto 14%;
+            padding: 20px;
+        }
+        .mainpage{
+            display:inline-block;
+            padding:7px 10px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result"><a href="code_timemachine.html"><b>TIME MACHINE</b></a></div>
+    <div class="braver">
+        <ul>
+            <div class="de"><li onclick="decrease()">◀︎</li></div>
+            <div class="box"><img id="img" src="pic_1.jpeg" height="300px"/></div>
+            <div class="in"><li onclick="increase()">►</li></div>
+        </ul>
+    </div>
+    <div class="brave">
+        <ul>
+            <li><a href="code_mainpage2.html">main page</a></li>
+        </ul>
+    </div>
+        <script>
+            var cnt=0;
+            function increase(){
+                cnt+=1;
+                if (cnt==6){
+                    cnt=0;
+                }
+                toggleImg(cnt);
+            }
+            $decBtn.addEventListener("click",decrease);
+            function decrease(){
+                cnt-=1;
+                if (cnt<0){
+                    cnt=5;
+                }
+                toggleImg(cnt);
+            }
+            function toggleImg(cnt) {
+                if (cnt==1){
+                    document.getElementById("img").src = "pic_2.jpeg";
+                }
+                else if (cnt==2){
+                    document.getElementById("img").src = "pic_3.jpeg";
+                }
+                else if (cnt==3){
+                    document.getElementById("img").src = "pic_4.jpeg";
+                }
+                else if (cnt==4){
+                    document.getElementById("img").src = "pic_5.jpeg";
+                }
+                else if (cnt==5){
+                    document.getElementById("img").src = "pic_6.jpeg";
+                }
+                else{
+                    document.getElementById("img").src = "pic_1.jpeg";
+                }
+            }
+        </script>
+</body>
+</html>

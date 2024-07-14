@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        body{
+            font-family: "Black Han Sans", sans-serif;
+            color: #8FC76D;
+        }
+        .research{
+            font-size: 25px;
+        }
+        .name{
+            text-align: center;
+            margin-top: 120px;
+        }
+        .bar{
+            text-align: center;
+            margin: 40px auto;
+        }
+        .bar > img{
+            position: relative;
+        }
+        #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8{
+            display: inline-block;
+            margin: auto 30px;
+            border-radius: 50%;
+        }
+        .group{
+            text-align: center;
+            margin: 20px ;
+        }
+        #tm, #motto, #quiz, #book, #music, #review, #thank, #good{
+            display: none;
+            font-size: 20px;
+            position: absolute;
+            color: #B9E59D;
+            margin-top: 1.3%;
+            left: 50%;
+            transform: translate( -50%, -50% );
+        }
+        #cir1, #cir2, #cir3, #cir4, #cir5, #cir6, #cir7, #cir8{
+            width: 60px;
+            height: 60px;
+            background-color: #8FC76D;
+            border-radius: 50%;
+        } 
+    </style>
+</head>
+<body>
+    <div class="research">
+        <script>
+            var sir=prompt("이름을 입력하세요");
+            document.write("<b>"+sir+"</b>님, 가은이의 자기소개 페이지에 오신걸 환영합니다!");
+        </script>
+    </div>
+    <div class="name">
+        <a href = "code_gaeun_clicked.html">
+            <img src = "pic_gaeun.png" alt="GAEUN" width="350px"></a>
+    </div>
+    <div class="bar">
+        <div id="tm"><p>t i m e m a c h i n e</p></div>
+        <div id="motto"><p>m o t t o o f m y l i f e</p></div>
+        <div id="quiz"><p>q u i z a b o u t m e</p></div>
+        <div id="book"><p>b o o k l i s t</p></div>
+        <div id="music"><p>m u s i c p l a y e r</p></div>
+        <div id="review"><p>d e s i g n</p></div>
+        <div id="thank"><p>i n f o r m a t i o n</p></div>
+        <div id="good"><p>t h a n k y o u f o r v i s i t i n g</p></div>
+        <a href = "https://www.google.co.kr/?hl=ko&safe=active&ssui=on">
+            <img src = "pic_bar.png" alt="google" width="500px"></a>
+    </div>
+
+        <div class="group">
+            <div id="btn1">
+                <a href = "code_timemachine.html">
+                    <div id="cir1"></div></a>
+            </div>
+            <div id="btn2">
+                <a href = "code_motto.html">
+                    <div id="cir2"></div></a>
+            </div>
+            <div id="btn3">
+                <a href = "code_quiz.html">
+                    <div id="cir3"></div></a>
+            </div>
+            <div id="btn4">
+                <a href = "code_booklist.html">
+                    <div id="cir4"></div></a>
+            </div>
+        </div>
+        <br>
+        <div class="group">
+            <div id="btn5">
+                <a href = "code_musicplayer.html">
+                    <div id="cir5"></div></a>
+            </div>
+            <div id="btn6">
+                <a href = "https://www.figma.com/design/MtZ5pKqyfBQocc3cYuiQoM/Untitled?node-id=92-76&m=dev">
+                    <div id="cir6"></div></a>
+            </div>
+            <div id="btn7">
+                <a href = "code_information.html">
+                    <div id="cir7"></div></a>
+            </div>
+            <div id="btn8">
+                    <div id="cir8"></div>
+            </div>
+        </div>
+
+        <script>
+        var btn = document.getElementById('btn1');
+        var btn1 = document.getElementById('tm');
+        var cir1 = document.getElementById('cir1');
+
+        btn.addEventListener('mouseover', function() {
+            btn1.style.display = 'inline-block';
+            cir1.style.backgroundColor='#B9E59D';
+        });
+
+        btn.addEventListener('mouseout', function() {
+            btn1.style.display = 'none';
+            cir1.style.backgroundColor='#8FC76D';
+        });
+
+        var btn22 = document.getElementById('btn2');
+        var btn2 = document.getElementById('motto');
+        var cir2 = document.getElementById('cir2');
+
+        btn22.addEventListener('mouseover', function() {
+            btn2.style.display = 'inline-block';
+            cir2.style.backgroundColor='#B9E59D';
+        });
+
+        btn22.addEventListener('mouseout', function() {
+            btn2.style.display = 'none';
+            cir2.style.backgroundColor='#8FC76D';
+        });
+
+        var btn33 = document.getElementById('btn3');
+        var btn3 = document.getElementById('quiz');
+        var cir3 = document.getElementById('cir3');
+
+        btn33.addEventListener('mouseover', function() {
+            btn3.style.display = 'inline-block';
+            cir3.style.backgroundColor='#B9E59D';
+        });
+
+        btn33.addEventListener('mouseout', function() {
+            btn3.style.display = 'none';
+            cir3.style.backgroundColor='#8FC76D';
+        });
+
+        var btn44 = document.getElementById('btn4');
+        var btn4 = document.getElementById('book');
+        var cir4 = document.getElementById('cir4');
+
+        btn44.addEventListener('mouseover', function() {
+            btn4.style.display = 'inline-block';
+            cir4.style.backgroundColor='#B9E59D';
+        });
+
+        btn44.addEventListener('mouseout', function() {
+            btn4.style.display = 'none';
+            cir4.style.backgroundColor='#8FC76D';
+        });
+
+        var btn55 = document.getElementById('btn5');
+        var btn5 = document.getElementById('music');
+        var cir5 = document.getElementById('cir5');
+
+        btn55.addEventListener('mouseover', function() {
+            btn5.style.display = 'inline-block';
+            cir5.style.backgroundColor='#B9E59D';
+        });
+
+        btn55.addEventListener('mouseout', function() {
+            btn5.style.display = 'none';
+            cir5.style.backgroundColor='#8FC76D';
+        });
+
+        var btn66 = document.getElementById('btn6');
+        var btn6 = document.getElementById('review');
+        var cir6 = document.getElementById('cir6');
+
+        btn66.addEventListener('mouseover', function() {
+            btn6.style.display = 'inline-block';
+            cir6.style.backgroundColor='#B9E59D';
+        });
+
+        btn66.addEventListener('mouseout', function() {
+            btn6.style.display = 'none';
+            cir6.style.backgroundColor='#8FC76D';
+        });
+
+        var btn77 = document.getElementById('btn7');
+        var btn7 = document.getElementById('thank');
+        var cir7 = document.getElementById('cir7');
+
+        btn77.addEventListener('mouseover', function() {
+            btn7.style.display = 'inline-block';
+            cir7.style.backgroundColor='#B9E59D';
+        });
+
+        btn77.addEventListener('mouseout', function() {
+            btn7.style.display = 'none';
+            cir7.style.backgroundColor='#8FC76D';
+        });
+
+        var btn88 = document.getElementById('btn8');
+        var btn8 = document.getElementById('good');
+        var cir8 = document.getElementById('cir8');
+
+        btn88.addEventListener('mouseover', function() {
+            btn8.style.display = 'inline-block';
+            cir8.style.backgroundColor='#B9E59D';
+        });
+
+        btn88.addEventListener('mouseout', function() {
+            btn8.style.display = 'none';
+            cir8.style.backgroundColor='#8FC76D';
+        });
+        </script>
+
+
+
+</body>
+</html>

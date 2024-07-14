@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        body{
+            font-family: "Black Han Sans", sans-serif;
+            color: #8FC76D;
+        }
+        div{
+            display: inline-block;
+        }
+        .name > p{
+            margin-top: 30px;
+            font-size: 26px;
+            text-align: right;
+            font-style: normal;
+            line-height: 30px;
+            box-sizing: border-box;
+        }
+        .name{
+            text-align: right;
+            float: right;
+            font-size: 97.5px;
+            margin-top: 42px;
+            margin-right: 8%;
+        }
+        a:link, a:visited {
+            text-decoration: none;
+            color: #8FC76D;
+        }
+        .brave{
+            text-align: center;
+            margin-top: 1%;
+        }
+        .mainpage{
+            display:inline-block;
+            text-align:center;
+            border-radius: 80px;
+            padding-top: 100px;
+            border:5px solid #8FC76D;
+            padding:7px 10px;
+            font-size:18px;
+            position: fixed;
+            right: 8%;
+            bottom: 42px;
+        }
+
+
+
+
+
+        #phoneContainer{
+            background-color: #B9E59D;
+            border-radius: 5%;
+            height: 566.15px;
+            width: 354.9px;
+            text-align: center;
+            margin-top: 60px;
+            margin-left: 8%;
+        }
+        #phoneScreen{
+            margin-top: 24px;
+            display: inline-block;
+            background-color: white;
+            height: 455px;
+            width: 322.4px;
+            text-align: center;
+        }
+        #phoneButton{
+            display: inline-block;
+            background-color: #8FC76D;
+            border-radius: 50%;
+            width: 48.75px;
+            height: 48.75px;
+            text-align: center;
+            margin-top: 21px;
+        }
+        #phoneMusicSet{
+            margin-bottom: 7.5px;
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+        }
+        #phoneMusic1, #phoneMusic2, #phoneMusic3, #phoneMusic4, #phoneMusic5{
+            align-items: center;
+            width: 303.55px;
+            height: 81.9px;
+            background-color: #D6F0C7;
+            margin-top: 7.5px;
+            box-sizing: border-box;
+            display: flex;
+        }
+       #phoneMusicCover{
+            background: rgba(255, 255, 255, 0.80);
+            width: 57.2px;
+            height: 57.2px;
+            margin: 12px;
+            float: left;
+        }
+        #phoneMusicSinger{
+            color: #568936;
+            font-size: 18.5px;
+            margin-top: 15px;
+            margin-left: 16px;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        #phoneMusicTitle{
+            color: rgba(86, 137, 54, 0.6);
+            font-size: 10px;
+            padding-top: 0;
+            margin-left: 16px;
+            margin-bottom: 13px;
+            text-align: left;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="phoneContainer">
+        <div id="phoneScreen">
+            <div id="phoneMusicSet">
+                <div id="phoneMusic1">
+                    <div id="phoneMusicCover"></div>
+                    <div class="text-container">
+                        <p id="phoneMusicSinger">beautiful things</p>
+                        <p id="phoneMusicTitle">Benson Boone</p>
+                    </div>
+                </div>
+                <div id="phoneMusic2">
+                    <div id="phoneMusicCover"></div>
+                    <div class="text-container">
+                        <p id="phoneMusicSinger">backlight</p>
+                        <p id="phoneMusicTitle">Ado</p>
+                    </div>
+                </div>
+                <div id="phoneMusic3">
+                    <div id="phoneMusicCover"></div>
+                    <div class="text-container">
+                        <p id="phoneMusicSinger">without you</p>
+                        <p id="phoneMusicTitle">the Kid LAROI</p>
+                    </div>
+                </div>
+                <div id="phoneMusic4">
+                    <div id="phoneMusicCover"></div>
+                    <div class="text-container">
+                        <p id="phoneMusicSinger">american idiot</p>
+                        <p id="phoneMusicTitle">Greenday</p>
+                    </div>
+                </div>
+                <div id="phoneMusic5">
+                    <div id="phoneMusicCover"></div>
+                    <div class="text-container">
+                        <p id="phoneMusicSinger">summer</p>
+                        <p id="phoneMusicTitle">Hisaishi Joe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="phoneButton"></div>
+    </div>
+
+
+
+
+
+
+    <div class="name">
+        <a href = "code_musicplayer.html">
+            MUSIC<br>PLAYER</a>
+        <p>원하는 음악을 클릭하면 노래를 틀 수 있습니다!<br>한번 더 누르면 노래를 멈출 수 있습니다.</p>
+    </div>
+    <div class="brave">
+        <div class="mainpage"><a href="code_mainpage2.html">main page</a></div>
+    </div>
+
+    <audio id="audio1" src="music_beautifulthings.m4a"></audio>
+    <audio id="audio2" src="music_backlight.m4a"></audio>
+    <audio id="audio3" src="music_withoutyou.m4a"></audio>
+    <audio id="audio4" src="music_americanidiot.m4a"></audio>
+    <audio id="audio5" src="music_summer.m4a"></audio>
+
+
+        <script>
+            var btn1 = document.getElementById('phoneMusic1');
+
+            btn1.addEventListener('mouseover', function() {
+                btn1.style.backgroundColor='#AFDC94';
+            });
+
+            btn1.addEventListener('mouseout', function() {
+                btn1.style.backgroundColor='#D6F0C7';
+            });
+
+            const musicDiv1 = document.getElementById('phoneMusic1');
+            const audio1 = document.getElementById('audio1');
+            
+            musicDiv1.addEventListener('click', function() {
+                if (audio1.paused) {
+                    audio1.currentTime = 0;
+                    audio1.play();
+                } else {
+                    audio1.pause();
+                }
+            });
+
+            var btn2 = document.getElementById('phoneMusic2');
+
+            btn2.addEventListener('mouseover', function() {
+                btn2.style.backgroundColor='#AFDC94';
+            });
+
+            btn2.addEventListener('mouseout', function() {
+                btn2.style.backgroundColor='#D6F0C7';
+            });
+
+            const musicDiv2 = document.getElementById('phoneMusic2');
+            const audio2 = document.getElementById('audio2');
+            
+            musicDiv2.addEventListener('click', function() {
+                if (audio2.paused) {
+                    audio2.currentTime = 0;
+                    audio2.play();
+                } else {
+                    audio2.pause();
+                }
+            });
+
+            var btn3 = document.getElementById('phoneMusic3');
+
+            btn3.addEventListener('mouseover', function() {
+                btn3.style.backgroundColor='#AFDC94';
+            });
+
+            btn3.addEventListener('mouseout', function() {
+                btn3.style.backgroundColor='#D6F0C7';
+            });
+
+            const musicDiv3 = document.getElementById('phoneMusic3');
+            const audio3 = document.getElementById('audio3');
+            
+            musicDiv3.addEventListener('click', function() {
+                if (audio3.paused) {
+                    audio3.currentTime = 0;
+                    audio3.play();
+                } else {
+                    audio3.pause();
+                }
+            });
+
+            var btn4 = document.getElementById('phoneMusic4');
+
+            btn4.addEventListener('mouseover', function() {
+                btn4.style.backgroundColor='#AFDC94';
+            });
+
+            btn4.addEventListener('mouseout', function() {
+                btn4.style.backgroundColor='#D6F0C7';
+            });
+
+            const musicDiv4 = document.getElementById('phoneMusic4');
+            const audio4 = document.getElementById('audio4');
+            
+            musicDiv4.addEventListener('click', function() {
+                if (audio4.paused) {
+                    audio4.currentTime = 0;
+                    audio4.play();
+                } else {
+                    audio4.pause();
+                }
+            });
+
+            var btn5 = document.getElementById('phoneMusic5');
+
+            btn5.addEventListener('mouseover', function() {
+                btn5.style.backgroundColor='#AFDC94';
+            });
+
+            btn5.addEventListener('mouseout', function() {
+                btn5.style.backgroundColor='#D6F0C7';
+            });
+
+            const musicDiv5 = document.getElementById('phoneMusic5');
+            const audio5 = document.getElementById('audio5');
+            
+            musicDiv5.addEventListener('click', function() {
+                if (audio5.paused) {
+                    audio5.currentTime = 0;
+                    audio5.play();
+                } else {
+                    audio5.pause();
+                }
+            });
+        </script>
+
+
+
+</body>
+</html>
